@@ -14,7 +14,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Qopztock",
-  description: "Stock Market App with alerts, charts and AI insights",
+  description: "Track real-time stock prices, get personalized alerts and explore detailed company insights.",
+  // description: "Stock Market App with alerts, charts and AI insights",
 };
 
 export default function RootLayout({ children }: Readonly<{children: React.ReactNode}>) {
