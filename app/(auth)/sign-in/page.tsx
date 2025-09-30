@@ -21,6 +21,7 @@ const SignIn = () => {
 
     const onSubmit = async (data: SignInFormData) => {
         try {
+            // console.log(data)
             // const result = await signInWithEmail(data);
             // if(result.success) router.push('/');
         } catch (e) {
