@@ -112,6 +112,28 @@
   --sidebar-ring: oklch(0.551 0.027 264.364);
 }
 
+/* === CUSTOM COLOR THEME === */
+@theme {
+  /* Extended Gray Scale */
+  --color-gray-900: #050505;
+  --color-gray-800: #141414;
+  --color-gray-700: #212328;
+  --color-gray-600: #30333A;
+  --color-gray-500: #9095A1;
+  --color-gray-400: #CCDADC;
+
+  /* Vibrant Colors */
+  --color-blue-600: #5862FF;
+  --color-yellow-400: #FDD458;
+  --color-yellow-500: #E8BA40;
+  --color-teal-400: #0FEDBE;
+  --color-red-500: #FF495B;
+  --color-orange-500: #FF8243;
+  --color-purple-500: #D13BFF;
+}
+
+
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -153,7 +175,7 @@
     @apply w-full max-lg:border-t max-lg:border-gray-600 lg:w-[55%] lg:h-screen bg-gray-800 px-6 py-4 md:p-6 lg:py-12 lg:px-18 flex flex-col justify-start;
   }
   .auth-blockquote {
-    @apply text-sm md:text-xl lg:text-2xl font-medium text-gray-400 mb-1 md:mb-6 lg:mb-8;
+    @apply text-sm md:text-lg lg:text-xl font-medium text-gray-400 mb-1 md:mb-6 lg:mb-8;
   }
   .auth-testimonial-author {
     @apply text-xs md:text-lg font-bold text-gray-400 not-italic;
