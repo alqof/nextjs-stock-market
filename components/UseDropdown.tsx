@@ -9,17 +9,12 @@ import NavItems from "@/components/NavItems";
 // import {signOut} from "@/lib/actions/auth.actions";
 
 // const UserDropdown = ({ user, initialStocks }: {user: User, initialStocks: StockWithWatchlistStatus[]}) => {
-const UserDropdown = () => {
+const UserDropdown = ({ user }: { user: User }) => {
     const router = useRouter();
 
     const handleSignOut = async () => {
         // await signOut();
         router.push("/sign-in");
-    }
-
-    const user = {
-        name: "user",
-        email: "usertest@gmail.com"
     }
 
     return (
