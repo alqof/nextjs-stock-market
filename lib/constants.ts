@@ -39,7 +39,7 @@ export const CONDITION_OPTIONS = [
 // TradingView Charts
 export const MARKET_OVERVIEW_WIDGET_CONFIG = {
     colorTheme: 'dark', // dark mode
-    dateRange: '12M', // last 12 months
+    dateRange: "ALL",
     locale: 'en', // language
     largeChartUrl: '', // link to a large chart if needed
     isTransparent: true, // makes background transparent
@@ -55,35 +55,34 @@ export const MARKET_OVERVIEW_WIDGET_CONFIG = {
     symbolActiveColor: 'rgba(15, 237, 190, 0.05)', // highlight color for active symbol
     tabs: [
         {
-            title: 'Financial',
-            symbols: [
-                { s: 'NYSE:JPM', d: 'JPMorgan Chase' },
-                { s: 'NYSE:WFC', d: 'Wells Fargo Co New' },
-                { s: 'NYSE:BAC', d: 'Bank Amer Corp' },
-                { s: 'NYSE:HSBC', d: 'Hsbc Hldgs Plc' },
-                { s: 'NYSE:C', d: 'Citigroup Inc' },
-                { s: 'NYSE:MA', d: 'Mastercard Incorporated' },
-            ],
-        },
-        {
             title: 'Technology',
             symbols: [
+                { s: "NASDAQ:NVDA", d: "Nvidia"},
                 { s: 'NASDAQ:AAPL', d: 'Apple' },
                 { s: 'NASDAQ:GOOGL', d: 'Alphabet' },
                 { s: 'NASDAQ:MSFT', d: 'Microsoft' },
-                { s: 'NASDAQ:FB', d: 'Meta Platforms' },
+                { s: 'NASDAQ:META', d: 'Meta Platforms' },
                 { s: 'NYSE:ORCL', d: 'Oracle Corp' },
                 { s: 'NASDAQ:INTC', d: 'Intel Corp' },
             ],
         },
         {
-            title: 'Services',
+            title: 'Crypto',
             symbols: [
-                { s: 'NASDAQ:AMZN', d: 'Amazon' },
-                { s: 'NYSE:BABA', d: 'Alibaba Group Hldg Ltd' },
-                { s: 'NYSE:T', d: 'At&t Inc' },
-                { s: 'NYSE:WMT', d: 'Walmart' },
-                { s: 'NYSE:V', d: 'Visa' },
+                { s: "CRYPTOCAP:TOTAL", d: "", logoid: "crypto-total-market-cap", "currency-logoid": "country/US" },
+                { s: 'CRYPTO:BTCUSD', d: 'Bitcoin' },
+                { s: 'CRYPTO:ETHUSD', d: 'Ethereum' },
+                { s: 'CRYPTO:SOLUSD', d: 'Solana' },
+            ],
+        },
+        {
+            title: "Futures",
+            symbols: [
+                { "s": "BMFBOVESPA:ISP1!", "d": "S&P 500" },
+                { s: "BMFBOVESPA:EUR1!", d: "Euro" },
+                { s: "CMCMARKETS:GOLD", d: "Gold" },
+                { s: "PYTH:WTI3!", d: "WTI Crude Oil" },
+                { s: "BMFBOVESPA:CCM1!", d: "Corn" }
             ],
         },
     ],
@@ -194,7 +193,7 @@ export const CANDLE_CHART_WIDGET_CONFIG = (symbol: string) => ({
     style: 1,
     symbol: symbol.toUpperCase(),
     theme: 'dark',
-    timezone: 'Etc/UTC',
+    timezone: "Asia/Jakarta",
     backgroundColor: '#141414',
     gridColor: '#141414',
     watchlist: [],
@@ -220,7 +219,7 @@ export const BASELINE_WIDGET_CONFIG = (symbol: string) => ({
     style: 10,
     symbol: symbol.toUpperCase(),
     theme: 'dark',
-    timezone: 'Etc/UTC',
+    timezone: "Asia/Jakarta",
     backgroundColor: '#141414',
     gridColor: '#141414',
     watchlist: [],
