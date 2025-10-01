@@ -21,7 +21,7 @@ const UserDropdown = ({ user }: { user: User }) => {
         <DropdownMenu>
             <DropdownMenuTrigger asChild>
                 <Avatar className="h-8 w-8 cursor-pointer">
-                    <AvatarImage src="https://avatars.githubusercontent.com/u/153423955?s=280&v=4" />
+                    <AvatarImage src="https://res.cloudinary.com/dw5zhpdcq/image/upload/v1759302055/xga6aur7vjyoqws7sple.png" />
                     <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
                         {user.name[0]}
                     </AvatarFallback>
@@ -37,7 +37,7 @@ const UserDropdown = ({ user }: { user: User }) => {
                 <DropdownMenuLabel>
                     <div className="flex relative items-center gap-3 py-2">
                         <Avatar className="h-10 w-10">
-                            <AvatarImage src="https://avatars.githubusercontent.com/u/153423955?s=280&v=4" />
+                            <AvatarImage src="https://res.cloudinary.com/dw5zhpdcq/image/upload/v1759302055/xga6aur7vjyoqws7sple.png" />
                             <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
                                 {user.name[0]}
                             </AvatarFallback>
