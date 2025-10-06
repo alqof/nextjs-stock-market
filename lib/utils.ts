@@ -79,16 +79,10 @@ export const validateArticle = (article: RawNewsArticle) =>
 // Get today's date string in YYYY-MM-DD format
 export const getTodayString = () => new Date().toISOString().split('T')[0];
 
-export const formatArticle = (
-    article: RawNewsArticle,
-    isCompanyNews: boolean,
-    symbol?: string,
-    index: number = 0
-) => ({
+export const formatArticle = ( article: RawNewsArticle, isCompanyNews: boolean, symbol?: string, index: number = 0 ) => ({
   id: isCompanyNews ? Date.now() + Math.random() : article.id + index,
   headline: article.headline!.trim(),
-  summary:
-      article.summary!.trim().substring(0, isCompanyNews ? 200 : 150) + '...',
+  summary: article.summary!.trim().substring(0, isCompanyNews ? 200 : 150) + '...',
   source: article.source || (isCompanyNews ? 'Company News' : 'Market News'),
   url: article.url!,
   datetime: article.datetime!,

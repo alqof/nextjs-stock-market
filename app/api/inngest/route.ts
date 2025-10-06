@@ -1,5 +1,5 @@
-import {serve} from "inngest/next";
-import {inngest} from "@/lib/inngest/client";
+import { serve } from "inngest/next";
+import { inngest } from "@/lib/inngest/client";
 import { sendDailyNewsSummary, sendSignUpEmail } from "@/lib/inngest/functions";
 
 

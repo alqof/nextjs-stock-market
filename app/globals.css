@@ -46,19 +46,19 @@
 :root {
   --radius: 0.625rem;
   --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --foreground: oklch(18.482% 0.05298 140.804);
   --card: oklch(1 0 0);
-  --card-foreground: oklch(0.129 0.042 264.695);
+  --card-foreground: oklch(18.482% 0.05298 140.804);
   --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
+  --popover-foreground: oklch(18.482% 0.05298 140.804);
+  --primary: oklch(21.146% 0.04864 141.84)
   --primary-foreground: oklch(0.984 0.003 247.858);
   --secondary: oklch(0.968 0.007 247.896);
-  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --secondary-foreground: oklch(21.146% 0.04864 141.84)
   --muted: oklch(0.968 0.007 247.896);
   --muted-foreground: oklch(0.554 0.046 257.417);
   --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --accent-foreground: oklch(21.146% 0.04864 141.84)
   --destructive: oklch(0.577 0.245 27.325);
   --border: oklch(0.929 0.013 255.508);
   --input: oklch(0.929 0.013 255.508);
@@ -69,29 +69,29 @@
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: oklch(0.984 0.003 247.858);
-  --sidebar-foreground: oklch(0.129 0.042 264.695);
-  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-foreground: oklch(18.482% 0.05298 140.804);
+  --sidebar-primary: oklch(21.146% 0.04864 141.84)
   --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
   --sidebar-accent: oklch(0.968 0.007 247.896);
-  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-accent-foreground: oklch(21.146% 0.04864 141.84)
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
 }
 
 .dark {
-  --background: oklch(0.129 0.042 264.695);
+  --background: oklch(0% 0 0);
   --foreground: oklch(0.984 0.003 247.858);
-  --card: oklch(0.208 0.042 265.755);
+  --card: oklch(21.146% 0.04864 141.84);
   --card-foreground: oklch(0.984 0.003 247.858);
-  --popover: oklch(0.208 0.042 265.755);
+  --popover: oklch(21.146% 0.04864 141.84)
   --popover-foreground: oklch(0.984 0.003 247.858);
   --primary: oklch(0.929 0.013 255.508);
-  --primary-foreground: oklch(0.208 0.042 265.755);
-  --secondary: oklch(0.279 0.041 260.031);
+  --primary-foreground: oklch(21.146% 0.04864 141.84)
+  --secondary: oklch(32.607% 0.06668 143.884);
   --secondary-foreground: oklch(0.984 0.003 247.858);
-  --muted: oklch(0.279 0.041 260.031);
+  --muted: oklch(32.841% 0.06402 141.324);
   --muted-foreground: oklch(0.704 0.04 256.788);
-  --accent: oklch(0.279 0.041 260.031);
+  --accent: oklch(32.607% 0.06668 143.884);
   --accent-foreground: oklch(0.984 0.003 247.858);
   --destructive: oklch(0.704 0.191 22.216);
   --border: oklch(1 0 0 / 10%);
@@ -102,11 +102,11 @@
   --chart-3: oklch(0.769 0.188 70.08);
   --chart-4: oklch(0.627 0.265 303.9);
   --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.208 0.042 265.755);
+  --sidebar: oklch(21.146% 0.04864 141.84)
   --sidebar-foreground: oklch(0.984 0.003 247.858);
   --sidebar-primary: oklch(0.488 0.243 264.376);
   --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
-  --sidebar-accent: oklch(0.279 0.041 260.031);
+  --sidebar-accent: oklch(32.607% 0.06668 143.884);
   --sidebar-accent-foreground: oklch(0.984 0.003 247.858);
   --sidebar-border: oklch(1 0 0 / 10%);
   --sidebar-ring: oklch(0.551 0.027 264.364);
@@ -142,6 +142,7 @@
     @apply bg-background text-foreground;
   }
 }
+
 
 @layer utilities {
   .container {
@@ -244,7 +245,7 @@
     @apply rounded-none my-3 px-1 w-full data-[selected=true]:bg-gray-600;
   }
   .search-item-link {
-    @apply px-2 w-full cursor-pointer border-b border-gray-600 last:border-b-0 transition-colors flex items-center gap-3;
+    @apply px-2 w-full cursor-pointer border-b border-gray-600 last:border-b-0 transition-colors flex items-center gap-3 hover:bg-green-900;
   }
   .search-item-name {
     @apply font-medium text-base text-gray-400;
@@ -380,6 +381,7 @@
   }
 }
 
+
 /* Market News Component Styles */
 .scrollbar-hide {
   -ms-overflow-style: none;
@@ -397,32 +399,26 @@
   border-radius: 8px !important;
   overflow: hidden !important;
 }
-
 .tv-embed-widget-wrapper__body {
   background-color: #141414 !important;
 }
-
 .tradingview-widget-container__widget {
   background-color: #141414 !important;
   height: 100% !important;
 
 }
-
 .widget-stock-heatmap-container .screenerMapWrapper-BBVfGP0b {
   overflow: hidden !important;
   background: #141414 !important;
   background-color: #141414 !important;
 }
-
 .canvasContainer-tyaAU8aH {
   background: #141414 !important;
   background-color: #141414 !important;
 }
-
 .tv-site-widget--bg_none {
   background-color: transparent !important;
 }
-
 .tradingview-widget-copyright {
   font-size: 11px;
   color: #9ca3af;
@@ -430,28 +426,23 @@
   padding: 4px 0;
   background-color: transparent;
 }
-
 .tradingview-widget-copyright a {
   color: #60a5fa;
   text-decoration: none;
   transition: color 0.2s ease;
 }
-
 .tradingview-widget-copyright a:hover {
   color: #93c5fd;
   text-decoration: underline;
 }
-
 .tv-embed-widget-wrapper .tv-embed-widget-wrapper__body {
   background: #141414 !important;
   background-color: #141414 !important;
 }
-
 .tradingview-widget-container iframe {
   background-color: #141414 !important;
   width: 100% !important;
 }
-
 .custom-chart.tradingview-widget-container iframe {
   border: 1px solid #30333A;
   border-radius: 8px !important;
@@ -463,29 +454,23 @@
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
 }
-
 .scrollbar-hide-default::-webkit-scrollbar {
   width: 8px;
 }
-
 .scrollbar-hide-default::-webkit-scrollbar-track {
   background: transparent;
 }
-
 .scrollbar-hide-default::-webkit-scrollbar-thumb {
   background-color: transparent;
   border-radius: 4px;
   transition: background-color 0.3s ease;
 }
-
 .scrollbar-hide-default:hover {
-  scrollbar-color: #30333A transparent;
+  scrollbar-color: #323a30 transparent;
 }
-
 .scrollbar-hide-default:hover::-webkit-scrollbar-thumb {
-  background-color: #30333A;
+  background-color: #323a30;
 }
-
 .scrollbar-hide-default::-webkit-scrollbar-thumb:hover {
   background-color: #9095A1;
 }
