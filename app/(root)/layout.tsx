@@ -13,8 +13,6 @@ const Layout = async ({ children }: { children : React.ReactNode }) => {
         email: session.user.email,
     }
 
-    console.log(session.user)
-
     return (
         <main className="min-h-screen text-gray-400">
             <Header user={user} />

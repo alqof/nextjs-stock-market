@@ -16,7 +16,7 @@ export const sendWelcomeEmail = async ({ email, name, intro }: WelcomeEmailData)
         .replace('{{intro}}', intro);
 
     const mailOptions = {
-        from: `"Qopztock" <jancuk020298@gmail.com>`,
+        from: `"Qopztock" <qopzydev@gmail.com>`,
         to: email,
         subject: `Welcome to Qopztock - your stock market toolkit is ready!`,
         text: 'Thanks for joining Qopztock',
@@ -32,10 +32,10 @@ export const sendNewsSummaryEmail = async ({ email, date, newsContent }: { email
         .replace('{{newsContent}}', newsContent);
 
     const mailOptions = {
-        from: `"Qopztock News" <jancuk020298@gmail.com>`,
+        from: `"Qopztock News" <qopzydev@gmail.com>`,
         to: email,
         subject: `📈 Market News Summary Today - ${date}`,
-        text: `Today's market news summary from Signalist`,
+        text: `Today's market news summary from Qopztock`,
         html: htmlTemplate,
     };
 
